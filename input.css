@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.section-container-1{
+    @apply px-24
+}
+.section-container-2{
+    @apply px-12
+}
