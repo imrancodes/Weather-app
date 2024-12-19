@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       screens:{
-        'media550': '550px'
+        'media550': '550px',
+        'media450': '450px'
       },
     },
     fontFamily:{

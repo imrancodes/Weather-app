@@ -13,6 +13,9 @@ const humidity = document.querySelector('.humidity')
 const windSpeed = document.querySelector('.wind-speed')
 const visibility = document.querySelector('.visibility')
 const cloud = document.querySelector('.cloud')
+const noCity = document.querySelector('.no-city')
+const cityDetail = document.querySelector('.city-detail')
+const weatherDetail = document.querySelector('.weather-detail')
 
 const ApiKey1 = 'f7b12ea3';
 const ApiKey2 = '70bf1a07';
@@ -42,7 +45,17 @@ function fetchWeather(city) {
             windSpeed.innerText = `${Math.round(data.wind.speed)} ${windUnit}`
             visibility.innerText = `${data.visibility / 1000} Km`
             cloud.innerText = `${data.clouds.all} %`
-        });
+            noCity.classList.add('hidden')
+            weatherDetail.classList.remove('hidden')
+            cityDetail.classList.remove('hidden')
+            cityDetail.classList.add('flex')
+        })
+        .catch((err)=>{
+            noCity.classList.remove('hidden')
+            weatherDetail.classList.add('hidden')
+            cityDetail.classList.add('hidden')
+            cityDetail.classList.remove('flex')
+        })
 }
 
 document.addEventListener('DOMContentLoaded', () => {

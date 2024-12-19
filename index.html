@@ -21,7 +21,7 @@
             class="max-w-[1440px] mb-14 md:mt-24 mt-14 shadow-2xl rounded-2xl bg-[#AEB5E0] mx-auto py-10">
             <section
                 id="header"
-                class="flex md:items-center items-start justify-between md:px-24 px-12 gap-x-8 gap-y-4 max-md:flex-col">
+                class="flex md:items-center items-start justify-between md:px-24 media450:px-12 px-4 gap-x-8 gap-y-4 max-md:flex-col">
                 <div class="flex items-center shrink-0">
                     <img class="h-12 w-12" src="images/logo.png" alt="" />
                     <h2 class="font-bold text-xl text-black">Just Weather</h2>
@@ -38,9 +38,9 @@
                 </button>
             </section>
             <section
-                class="md:px-24 px-12 py-8 flex items-center gap-x-10 max-media550:flex-col">
+                class="md:px-24 media450:px-12 px-4 py-8 flex items-center gap-x-10 max-media550:flex-col city-detail">
                 <div>
-                    <h1 class="text-5xl font-normal mb-4 city-name">London</h1>
+                    <h1 class="text-5xl font-normal mb-4 city-name">New York</h1>
                     <h1 class="text-7xl font-bold temp max-media550:text-center">16°</h1>
                 </div>
                 <div>
@@ -48,7 +48,7 @@
                     <h1 class="text-center text-xl font-bold main">Smoke</h1>
                 </div>
             </section>
-            <section class="md:mx-24 mx-12 bg-[#CBCFEB] rounded-2xl p-6">
+            <section class="md:mx-24 media450:mx-12 mx-4 bg-[#CBCFEB] rounded-2xl p-6 weather-detail ">
                 <p class="pb-3 font-semibold text-lg">WEATHER DETAILS</p>
                 <div
                     class="grid lg:grid-cols-4 md:grid-cols-3 media550:grid-cols-2 grid-cols-1 gap-6">
@@ -198,6 +198,10 @@
                         </div>
                     </div>
                 </div>
+            </section>
+            <section class="flex items-center justify-center flex-col md:mx-24 mx-12 my-10 no-city hidden">
+                <img class="max-w-48" src="images/location.png" alt="">
+                <h1 class="mt-5 text-2xl">City Not Found</h1>
             </section>
         </div>
     </body>
